@@ -1,8 +1,9 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
 
-<web-app>
   <display-name>Archetype Created Web Application</display-name>
   <!-- 启动spring的容器 -->
  <!-- needed for ContextLoaderListener -->
@@ -31,18 +32,16 @@
 	</servlet-mapping>	
 	
 	
-	<!-- 字符编码过滤器 -->
+	<!-- 字符编码过滤器 一定要放在所有过滤器之前 -->
 	
 	<filter>
 	 <filter-name>CharacterEncodingFilter</filter-name>
 	    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
 	     <init-param>
+	     <!-- 配置字符编码 -->
 	       <param-name>encoding</param-name>
 	       <param-value>utf-8</param-value>
 	     </init-param>
-	     
-	     
-	     
 	       <init-param>
 	       <param-name>forceRequestEncoding</param-name>
 	       <param-value>true</param-value>
@@ -60,6 +59,15 @@
 	
 	</filter-mapping>
 	<!-- 使用rest的URI, 将普通的post请求转为delete或者put请求-->
+	<filter>
+	 <filter-name>HiddenHttpMethodFilter</filter-name>
+	<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+	  
+	</filter>
 	
+	<filter-mapping>
+	<filter-name>HiddenHttpMethodFilter</filter-name>
+	<url-pattern>/*</url-pattern>
+	</filter-mapping>
 	
 </web-app>
