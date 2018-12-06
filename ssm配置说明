@@ -1,0 +1,17 @@
+1,pagehelper(分页插件)
+2,mybatis(mybatis-generator-core)---mybatis逆向工程的jar包
+3,springMVC(spring-webmvc)
+4,返回json字符串依赖的jar包(jackson-databind)
+5,JSR303数据校验支持；tomcat8及以上的服务器， tomcat8以下的服务器：el表达式。额外给服务器的lib包中替换新的标准的el(hibernate-validator)
+6,spring-jdbc
+7,spring-test
+8,spring面向切面编程(spring-aspects)
+9,mybatis
+10,MyBatis整合Spring的适配包(mybatis-spring)
+11,数据库连接池、驱动(c3p0)
+12,MySQL(mysql-connector-java)
+13,jstl
+14,javax.servlet(javax.servlet-api)
+15,junit
+二,使用mybatis逆向工程
+1,引入逆项工程(mbg)jar包mybatis(mybatis-generator-core)
