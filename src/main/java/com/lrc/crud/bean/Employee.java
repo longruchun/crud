@@ -13,7 +13,32 @@ public class Employee {
     //希望查询员工的时候部门信息也是查询
     private Department department;
       
-    public Department getDepartment() {
+    
+    public Employee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Employee(Integer empId, String empName, String gender, String email, Integer dId) {
+		super();
+		this.empId = empId;
+		this.empName = empName;
+		this.gender = gender;
+		this.email = email;
+		this.dId = dId;
+	}
+
+	public Employee(Integer empId, String empName, String gender, String email, Integer dId, Department department) {
+		super();
+		this.empId = empId;
+		this.empName = empName;
+		this.gender = gender;
+		this.email = email;
+		this.dId = dId;
+		this.department = department;
+	}
+
+	public Department getDepartment() {
 		return department;
 	}
 

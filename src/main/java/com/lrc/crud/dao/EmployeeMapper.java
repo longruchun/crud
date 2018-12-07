@@ -22,7 +22,7 @@ public interface EmployeeMapper {
     
     //靠外键关联
     List<Employee> selectByExamplewithDept(EmployeeExample example);
-
+          //带组建和关联了的部门信息的方法
     Employee selectByPrimaryKeywithDept(Integer empId);
     
 //***************************************************************************
