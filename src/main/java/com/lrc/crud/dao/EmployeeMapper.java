@@ -19,6 +19,13 @@ public interface EmployeeMapper {
     List<Employee> selectByExample(EmployeeExample example);
 
     Employee selectByPrimaryKey(Integer empId);
+    
+    //靠外键关联
+    List<Employee> selectByExamplewithDept(EmployeeExample example);
+
+    Employee selectByPrimaryKeywithDept(Integer empId);
+    
+//***************************************************************************
 
     int updateByExampleSelective(@Param("record") Employee record, @Param("example") EmployeeExample example);
 

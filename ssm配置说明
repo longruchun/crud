@@ -15,3 +15,36 @@
 15,junit
 二,使用mybatis逆向工程
 1,引入逆项工程(mbg)jar包mybatis(mybatis-generator-core)
+添加新的联合查询语句步骤
+1,在/crud/src/main/java/com/lrc/crud/dao/EmployeeMapper中添加方法
+   下面方法的意思是查询Employee的同时要显示部门的信息,我们通过外键关联来查询
+<sql id="withDept_Column_List">
+     e.emp_id, e.emp_name, e.gender, e.email, e.d_id,d.dept_id,d.dept_name   
+  </sql>
+  <!--  List<Employee> selectByExamplewithDept(EmployeeExample example);
+      
+    Employee selectByPrimaryKeywithDept(Integer empId); -->
+    
+    <!-- 使用我们的查询 -->
+    
+    <select id="selectByExamplewithDept">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="withDept_Column_List" />
+    <!-- 连表查询语句 -->
+   form  tab_emp e
+  LEFT  JOIN tabl_dept d ON e.`tbl_emp`.'d_id'=d.`dept_id`
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+    
+    
+    
+    </select>
+    
+    
