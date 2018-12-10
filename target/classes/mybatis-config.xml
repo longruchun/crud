@@ -8,7 +8,7 @@
 	</settings>
 	
 	<typeAliases>
-		<package name="com.lrc.crud.bean"/>
+		<package name="com.crud.crud.bean"/>
 	</typeAliases>
 	
 	<plugins>

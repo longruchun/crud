@@ -1,4 +1,4 @@
-package com.lrc.crud.test;
+package com.crud.crud.test;
 
 import java.util.List;
 
@@ -16,8 +16,8 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
+import com.crud.crud.bean.Employee;
 import com.github.pagehelper.PageInfo;
-import com.lrc.crud.bean.Employee;
 
 
 /**
@@ -28,7 +28,7 @@ import com.lrc.crud.bean.Employee;
  */
 @WebAppConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath:applicationContext.xml","file:/crud/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml"})
+@ContextConfiguration(locations={"classpath*:applicationContext.xml","file:/crud/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml"})
 public class MvcTest {  
 	//传入springMVC的ioc
 	@Autowired

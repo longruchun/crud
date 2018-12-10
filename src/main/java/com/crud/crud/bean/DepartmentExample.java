@@ -1,4 +1,4 @@
-package com.lrc.crud.bean;
+package com.crud.crud.bean;
 
 import java.util.ArrayList;
 import java.util.List;

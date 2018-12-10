@@ -1,4 +1,4 @@
-package com.lrc.crud.test;
+package com.crud.crud.test;
 
 import java.util.UUID;
 
@@ -9,10 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.lrc.crud.bean.Department;
-import com.lrc.crud.bean.Employee;
-import com.lrc.crud.dao.DepartmentMapper;
-import com.lrc.crud.dao.EmployeeMapper;
+import com.crud.crud.bean.Department;
+import com.crud.crud.bean.Employee;
+import com.crud.crud.dao.DepartmentMapper;
+import com.crud.crud.dao.EmployeeMapper;
 
 /**
  * 测试dao层的工作
@@ -24,7 +24,7 @@ import com.lrc.crud.dao.EmployeeMapper;
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath:applicationContext.xml"})
+@ContextConfiguration(locations={"classpath*:applicationContext.xml"})
 public class MapperTest {
 	
 	@Autowired

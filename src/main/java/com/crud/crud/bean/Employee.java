@@ -1,4 +1,4 @@
-package com.lrc.crud.bean;
+package com.crud.crud.bean;
 
 public class Employee {
     private Integer empId;

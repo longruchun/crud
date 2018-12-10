@@ -1,12 +1,12 @@
-package com.lrc.crud.service;
+package com.crud.crud.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.lrc.crud.bean.Employee;
-import com.lrc.crud.dao.EmployeeMapper;
+import com.crud.crud.bean.Employee;
+import com.crud.crud.dao.EmployeeMapper;
 
 @Service
 public class EmployeeService {

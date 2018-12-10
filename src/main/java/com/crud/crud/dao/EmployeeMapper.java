@@ -1,9 +1,10 @@
-package com.lrc.crud.dao;
+package com.crud.crud.dao;
 
-import com.lrc.crud.bean.Employee;
-import com.lrc.crud.bean.EmployeeExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import com.crud.crud.bean.Employee;
+import com.crud.crud.bean.EmployeeExample;
 
 public interface EmployeeMapper {
     long countByExample(EmployeeExample example);

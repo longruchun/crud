@@ -1,9 +1,10 @@
-package com.lrc.crud.dao;
+package com.crud.crud.dao;
 
-import com.lrc.crud.bean.Department;
-import com.lrc.crud.bean.DepartmentExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import com.crud.crud.bean.Department;
+import com.crud.crud.bean.DepartmentExample;
 
 public interface DepartmentMapper {
     long countByExample(DepartmentExample example);

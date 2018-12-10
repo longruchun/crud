@@ -1,4 +1,4 @@
-package com.lrc.crud.test;
+package com.crud.crud.test;
 
 import java.io.File;
 import java.io.IOException;
