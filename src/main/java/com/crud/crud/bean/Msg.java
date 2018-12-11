@@ -59,7 +59,7 @@ public class Msg {
 		this.msg = msg;
 	}
 	public Map<String, Object> getExtend() {
-		return extend;
+		return extend;//1
 	}
 	public void setExtend(Map<String, Object> extend) {
 		this.extend = extend;
