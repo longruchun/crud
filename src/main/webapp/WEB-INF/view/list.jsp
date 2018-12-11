@@ -17,13 +17,14 @@
     以/开始的相对路径,找资源,以服务器路径为标准(http://localhost:3306);需要加项目名
     http://localhost:3306/crud
      -->
-     <script
-	src="${APP_PATH }/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"
+    
+<script src="../../static/bootstrap-3.3.7-dist/js/bootstrap.min.js"
 	type="text/javascript" charset="utf-8"></script>
-<script src="${APP_PATH }/static/js/jquery-1.12.4.min.js"
+	<script src="../../static/js/jquery-1.12.4.min.js"
 	type="text/javascript" charset="utf-8"></script>
+	
 <link rel="stylesheet" type="text/css"
-	href="${APP_PATH }/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+	href="../../static/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
 </head>
 <body>
 	<!-- 搭建显示页面 -->

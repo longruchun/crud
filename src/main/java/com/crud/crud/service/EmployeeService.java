@@ -24,5 +24,18 @@ public class EmployeeService {
 		// TODO Auto-generated method stub
 		return employeeMapper.selectByExamplewithDept(null);
 	}
+	
+	
+	/**
+	 * 员工保存
+	 * @param employee
+	 */
+	
+	
+	public void saveEmp(Employee employee) {
+		// TODO Auto-generated method stub
+		employeeMapper.insertSelective(employee);
+		
+	}
 
 }
